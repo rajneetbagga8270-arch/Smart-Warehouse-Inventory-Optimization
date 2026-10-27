@@ -1,45 +1,100 @@
-HEAD
 # Smart Warehouse & Inventory Optimization Dashboard
 
-**Target role:** Graduate Engineer Trainee — Supply Chain Management & Warehousing  
-**Stack:** Python, Pandas, SQL, Streamlit, Plotly
+An interactive warehouse analytics dashboard designed to monitor inventory levels, order fulfilment, replenishment needs, and delivery delays using Python, SQL, Streamlit, and Plotly.
 
-> **Data note:** This project uses synthetic FMCG demo data. It is not ITC data and must not be presented as actual ITC performance.
+**Target Role:** Graduate Engineer Trainee (GET) — Supply Chain Management & Warehousing  
+**Tech Stack:** Python, Pandas, SQL, Streamlit, Plotly
 
-## Problem statement
-A distributor operating three warehouses needs to monitor inventory value, stockout risk, fulfilment and delivery delays so teams can prioritize replenishment.
+> **Data Disclaimer:** This project uses synthetic FMCG demo data. It does not contain actual ITC data or represent ITC's operational performance.
 
-## Dashboard features
-- Filter by warehouse, product category and date range.
-- Monitor order fulfilment rate, SKUs at/below reorder point, inventory value and average delivery delay.
-- Compare demand with fulfilled units over time.
-- Explore inventory value by warehouse and category.
-- View a replenishment watchlist and download filtered data.
+## Problem Statement
 
-## Run it
-Install Python 3.10+ then, from this folder:
-```bash
-pip install -r requirements.txt
-streamlit run app.py
+Warehouse teams need to monitor stock levels, inventory value, fulfilment rates, and delivery delays to identify replenishment priorities and improve inventory planning.
+
+## Key Features
+
+- **Interactive Filters:** Filter data by warehouse, product category, and date range.
+- **Order Fulfilment:** Monitor the percentage of ordered units successfully fulfilled.
+- **Inventory Monitoring:** Track inventory value and SKUs at or below their reorder points.
+- **Demand Analysis:** Compare ordered units against fulfilled units over time.
+- **Warehouse Comparison:** Analyze inventory value across warehouses and product categories.
+- **Delivery Performance:** Monitor average delivery delays.
+- **Replenishment Watchlist:** Identify products that may require restocking.
+- **Data Export:** Download filtered data for further analysis.
+
+## Technologies Used
+
+- **Python:** Core programming and data processing.
+- **Pandas:** Data cleaning, transformation, and analysis.
+- **SQL:** Queries for inventory analysis, replenishment priorities, and warehouse performance.
+- **Streamlit:** Interactive dashboard interface.
+- **Plotly:** Interactive charts and visualizations.
+
+## Project Structure
+
+```text
+Smart-Warehouse-Inventory-Optimization/
+├── app.py
+├── README.md
+├── requirements.txt
+├── data/
+│   └── warehouse_inventory.csv
+└── sql/
+    └── analysis_queries.sql
 ```
 
-## Files
-- `app.py`: interactive dashboard
-- `data/warehouse_inventory.csv`: synthetic data for Jan–Jun 2026
-- `sql/analysis_queries.sql`: five example SQL analyses
-- `requirements.txt`: required Python packages
+## Installation and Setup
 
-## Resume bullet
-**Smart Warehouse & Inventory Optimization Dashboard | Python, SQL, Power BI concepts, Streamlit**
-- Built an interactive dashboard to track order fulfilment, inventory valuation, reorder risk and delivery delays across three distribution centres using synthetic FMCG data.
-- Wrote SQL analyses to identify replenishment priorities, compare warehouse performance and quantify unfulfilled demand.
+**Prerequisites:** Python 3.10 or later and pip.
 
-## Interview explanation
-"I created a warehouse analytics dashboard using synthetic FMCG data for three distribution centres. It tracks fulfilment, inventory value, delivery delays and stock at or below a reorder point. I used Pandas to transform the data, Streamlit and Plotly for interactive visualizations, and SQL to analyze replenishment and warehouse performance. In a real deployment, I would validate the reorder policy using demand variability, supplier lead times, safety stock and actual business data."
+1. Clone the repository:
 
-## Important limitations
-The dataset is simulated, the reorder rule is illustrative, and no real cost savings are claimed. For a production model, use validated demand forecasts, supplier lead-time variability, safety stock and business-approved service levels.
+   ```bash
+   git clone https://github.com/rajneetbagga8270-arch/Smart-Warehouse-Inventory-Optimization.git
+   ```
 
-# Smart-Warehouse-Inventory-Optimization
-Interactive warehouse inventory dashboard built with Python, Pandas, SQL, Streamlit, and Plotly to track stock levels, order fulfilment, delivery delays, and replenishment needs using synthetic FMCG data.
->>>>>>> d25ec64dd65fdf63adf6b074dcca4d5da0c0716a
+2. Navigate to the project directory:
+
+   ```bash
+   cd Smart-Warehouse-Inventory-Optimization
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the dashboard:
+
+   ```bash
+   streamlit run app.py
+   ```
+
+5. Open the local URL displayed in your terminal.
+
+## Dataset
+
+The project includes simulated FMCG warehouse data covering January–June 2026 across three warehouses. The dataset is intended for demonstration and analytical practice, not for representing real business results.
+
+## SQL Analysis
+
+The `sql/analysis_queries.sql` file contains example queries for examining inventory levels, replenishment requirements, warehouse performance, and unfulfilled demand.
+
+## Resume Description
+
+**Smart Warehouse & Inventory Optimization Dashboard | Python, SQL, Streamlit, Plotly**
+
+- Developed an interactive dashboard to monitor inventory value, order fulfilment, replenishment risk, and delivery delays across three simulated warehouses.
+- Used Pandas for data analysis, Plotly for interactive visualizations, and SQL queries to identify replenishment priorities and compare warehouse performance.
+
+## Future Improvements
+
+- Integrate real warehouse management system data.
+- Improve reorder-point calculations using demand variability and supplier lead times.
+- Add demand forecasting and safety-stock optimization.
+- Evaluate business outcomes using validated operational data.
+
+## Limitations
+
+The dataset is synthetic, and the reorder rules are illustrative. The project does not claim actual cost savings or measured improvements in warehouse performance. Real-world deployment would require validated demand forecasts, supplier lead-time data, and business-approved inventory policies.
