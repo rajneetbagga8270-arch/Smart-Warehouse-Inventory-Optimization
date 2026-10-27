@@ -1,3 +1,4 @@
+HEAD
 # Smart Warehouse & Inventory Optimization Dashboard
 
 **Target role:** Graduate Engineer Trainee — Supply Chain Management & Warehousing  
@@ -38,3 +39,7 @@ streamlit run app.py
 
 ## Important limitations
 The dataset is simulated, the reorder rule is illustrative, and no real cost savings are claimed. For a production model, use validated demand forecasts, supplier lead-time variability, safety stock and business-approved service levels.
+
+# Smart-Warehouse-Inventory-Optimization
+Interactive warehouse inventory dashboard built with Python, Pandas, SQL, Streamlit, and Plotly to track stock levels, order fulfilment, delivery delays, and replenishment needs using synthetic FMCG data.
+>>>>>>> d25ec64dd65fdf63adf6b074dcca4d5da0c0716a
